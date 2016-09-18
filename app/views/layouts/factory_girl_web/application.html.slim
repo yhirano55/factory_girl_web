@@ -5,18 +5,22 @@ html
     meta name="viewport" content="width=device-width,initial-scale=1"
     = csrf_meta_tags
     = stylesheet_link_tag "//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css"
-    sass:
-      #main
-        margin-top: 4.5rem
-      .card
-        font-size: 85%
-        overflow: hidden
-      select.form-control
-        overflow: auto
-      footer
-        padding: 1.5rem 0
-        font-size: 80%
-        color: #888
+    css:
+      #main {
+        margin-top: 4.5rem;
+      }
+      .card {
+        font-size: 85%;
+        overflow: hidden;
+      }
+      select.form-control {
+        overflow: auto;
+      }
+      footer {
+        padding: 1.5rem 0;
+        font-size: 80%;
+        color: #888;
+      }
   body
     = render partial: "shared/factory_girl_web/header"
 
