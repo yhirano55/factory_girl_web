@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    factory_girl_web (0.0.1)
+    factory_girl_web (0.0.2)
       rails (>= 4.2)
       slim
 
