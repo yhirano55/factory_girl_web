@@ -1,0 +1,32 @@
+doctype html
+html
+head
+  title factory girl web
+  meta name="viewport" content="width=device-width,initial-scale=1"
+  = csrf_meta_tags
+  = stylesheet_link_tag "//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css"
+  sass:
+    #main
+      margin-top: 4.5rem
+    .card
+      font-size: 85%
+      overflow: hidden
+    select.form-control
+      overflow: auto
+    footer
+      padding: 1.5rem 0
+      font-size: 80%
+      color: #888
+body
+  = render partial: "shared/factory_girl_web/header"
+
+  .container-fluid#main
+    - if notice
+      .alert.alert-success role="alert"
+        small = notice
+    - if alert
+      .alert.alert-warning role="alert"
+        small = alert
+    = yield
+
+  = render partial: "shared/factory_girl_web/footer"

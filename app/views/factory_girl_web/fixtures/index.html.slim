@@ -1,0 +1,16 @@
+- @fixtures.each_slice(4) do |fixtures|
+  .row
+    - fixtures.each do |fixture|
+      .col-md-3
+        .card
+          .card-block
+            h6.card-title = fixture.name_i18n
+            = form_for fixture, url: fixtures_path do |f|
+              = f.hidden_field :name
+              .form-group
+                = f.label :traits
+                = f.select :traits, fixture.defined_traits, {}, multiple: true, size: 3, include_blank: false, class: "form-control"
+              .form-group
+                = f.label :amount
+                = f.number_field :amount, min: 1, required: true, class: "form-control"
+              = f.button :create, class: "btn btn-outline-primary"
