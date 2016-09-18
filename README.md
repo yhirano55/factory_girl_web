@@ -1,6 +1,6 @@
-# FactoryGirlWeb
+# factory_girl_web
 
-A Web interface for factory_girl
+A web interface for factory_girl
 
 ![](https://i.gyazo.com/dd2a8d28e490369b80fb9a824188b2d3.png)
 
